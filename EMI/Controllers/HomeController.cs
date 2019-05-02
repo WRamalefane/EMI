@@ -26,5 +26,35 @@ namespace EMI.Controllers
 
             return View();
         }
+
+        public ActionResult Sermons()
+        {
+            ViewBag.Message = "Your sermons page";
+            return View();
+        }
+        public ActionResult Events()
+        {
+            ViewBag.Message = "Your events page";
+            return View();
+
+        }
+        public ActionResult Homecells()
+        {
+            ViewBag.Message = "Your location page";
+            return View();
+
+        }
+        public ActionResult Giving()
+        {
+            ViewBag.Message = "Your givings page";
+            return View();
+
+        }
+        public ActionResult Ministries()
+        {
+            ViewBag.Message = "Your location page";
+            return View();
+        }
+
     }
 }

@@ -1,17 +1,124 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="jumbotron JumboImage text-center text-white ">
+    <div class="container" style="padding-top:50px;padding-bottom:50px;">
+        <h1 class="font-weight-bold" style="font-family:'Montserrat';font-size:50pt;">
+            Contact Us
+        </h1>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+        <h6 class="text-white font-weight-light" style="font-family:'Montserrat';font-size:16pt;">
+            Empowerment Ministries International admin teams is always keen and ready to answer any query.<br /> Please make use of any below mentioned contact method to send your query.
+        </h6>
+    </div>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <!-- close jumbotron -->
+
+    <br />
+    <div class="row text-center justify-content-center">
+        <div class="col-sm-2">
+            <i class="fa fa-phone"></i> <b>051 430 2110</b>
+        </div>
+        <div class="col-sm-2">
+            <i class="fa fa-envelope">
+            </i> <b>info@emi.org</b>
+        </div>
+
+        <div class="col-sm-2">
+            <i class="fa fa-map-marker"></i> <b>10 Rhodes Avenue</b>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row" align="center">
+
+        <div class="col-lg-6">
+            <h2 class="font-weight-bolder text-secondary" style="font-family:'Montserrat'" >
+                Message Us
+            </h2>
+            <p style="font-family:'Montserrat'">
+                Write to us your personalised message and we promise to get back to you as soon as possible.Everyone is allowed to write to us irregardless of your race,background or ethnicity just as God who is not selective.Our admin group is waiting for your messages.
+            </p>
+
+            <h2 class="font-weight-bold text-secondary" style="font-family:'Montserrat'">
+                Empowerment Ministries International
+            </h2>
+            <p style="font-family:'Montserrat'">
+                Transforming People, Building nations and changing the World through the Word.
+            </p>
+
+            <h2 class="font-weight-bold text-secondary" style="font-family:'Montserrat'">
+                Church Office Hours
+            </h2>
+            <p style="font-family:'Montserrat'">
+                Monday - Thursday : 08:00 AM - 16:30 PM
+            </p>
+            <p style="font-family:'Montserrat'">
+                Friday : 08:00 AM - 13:00 PM
+            </p>
+        </div> <!-- first column -->
+
+        <div class="col-lg-6" style="padding-top:25px;">
+            <form>
+
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="name" placeholder="Name"
+                           style="width:600px;" />
+                </div>
+
+
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="phone"
+                           style="width:450px;"
+                           placeholder="Contact Number" />
+                </div>
+
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" style="width:450px;"
+                           placeholder="Email" />
+                </div>
+
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="subject" style="width:450px;" placeholder="Subject" />
+
+
+                </div>
+
+                <div class="form-group">
+                    <textarea style="width:450px;"
+                              id="message" class="form-control"
+                              placeholder="Message">
+</textarea>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-outline-info btn-lg">
+                        Submit
+                    </button>
+                </div>
+            </form>
+
+
+        </div> <!--second column -->
+
+
+    </div> <!-- main row -->
+</div>
+
+<br />
+
+<div class="d-flex text-white  p-3  justify-content-center" style="padding-top:10px;background-color:#061C3B;">
+    <h1 class="font-weight-bold" style="font-family:'Montserrat'">
+        Locate Us
+    </h1>
+</div>
+
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=10%20Rhodes%20Avenue%20Oranjesig%20bloemfontein&key=AIzaSyDfmSUlrn06l0h_s9ygbnXezTW6W5GqROg"
+            class="embed-responsive embed-responsive-16by9"></iframe>
+</div>

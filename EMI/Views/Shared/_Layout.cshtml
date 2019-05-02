@@ -3,40 +3,85 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Empowerment Ministries International</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/font-awesome.min.css")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+ 
+    <nav class="navbar navbar-expand-lg  navbar-light fixed-top" >
+        <a class="navbar-brand font-weight-bold" href="#">
+       @*<i class="fa fa-globe" style="font-size:35pt;"></i>  Empowerment Ministries International*@ 
+            <img class="img-fluid" src="~/Images/logo.png" alt="Logo" style="min-height:10px;min-width:10px;height:50px;"/>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    @Html.ActionLink("HOME", "Index", "Home", null, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("CONTACT", "Contact", "Home", null, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("MINISTRIES", "Ministries", "Home", null, new { @class = "nav-link" })
+                </li>
+
+                <li class="nav-item">
+                    @Html.ActionLink("HOMECELLS", "Homecells", "Home", null, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("SERMONS", "Sermons", "Home", null, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("EVENTS", "Events", "Home", null, new { @class = "nav-link" })
+                </li>
+
+                <li class="nav-item">
+                    @Html.ActionLink("GIVING", "Giving", "Home", null, new { @class = "nav-link" })
+                </li>
+
+                <li class="nav-item">
+                    @Html.ActionLink("ABOUT", "About", "Home", null, new { @class = "nav-link" })
+                </li>
+
+
+            </ul>
+
         </div>
-    </div>
-    <div class="container body-content">
+    </nav>
+        
+
+    <div class="body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        
+        <footer class="text-center text-white" style="color:white;padding-top:50px;padding-bottom:50px;background-color:#061C3B" >
+            
+            <img class="img-fluid" src="~/Images/facebook_small.png" alt="facebook" />
+            <img class="img-fluid" src="~/Images/twitter_small.png" alt="facebook" />
+            
+            @*<i class="fa fa-facebook-square font-weight-bold text-lg-center" style="padding-right:2px;font-size:16pt;"> </i>
+            <i class="fa fa-twitter-square font-weight-bold text-lg-center" style="padding-left:2px;font-size:16pt;">  </i>*@
+
+            <div class="container justify-content-center">
+                
+                <p class="font-weight-bold text-white" style="font-family:'Montserrat'">Empowerment Ministries International</p>
+                <p class="text-white font-weight-bold" style="font-family:'Montserrat'">Copyright &copy; 2019 EMI. All Rights Reserved </p>
+            </div>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>
