@@ -1,4 +1,4 @@
-﻿@{
+﻿﻿@{
     ViewBag.Title = "Home";
 }
 
@@ -9,6 +9,7 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -17,13 +18,12 @@
                     <div class="carousel-caption text-left">
 
                         <img class="img-fluid" src="~/Images/EMI LOGO.png" />
-                        @*<h1 class="font-weight-bold">Empowerment Ministries International</h1>*@
 
                         <p class="font-weight-bold">
                             Transforming people,bulding nations and changing the world through the word.
                         </p>
                         <p>
-                            <a class="btn btn-lg btn-outline-info" href="#" role="button">
+                            <a class="btn btn-lg btn-outline-info" href="@Url.Action("About","Home")" role="button">
 
                                 <i class="fa fa-info-circle"> </i> <b>Find Out More </b>
 
@@ -47,14 +47,8 @@
                             Main Service : 10:10 AM - 12:30 AM
                         </p>
                         <p class="font-weight-bolder">
-                            Jeans and Sneakers : 17:00 PM - 18:00 PM
+                            Jeans and Sneakers : 17:00 PM - 18:30 PM
                         </p>
-
-                        <h5 class="text-white font-weight-bold">
-                            <i class="fa fa-phone"> </i> 051 430 4149 |   <i class="fa fa-envelope"> </i> info@emi.org | <i class="fa fa-map-marker"></i>
-                            10 Rhodes Avenue
-                        </h5>
-
 
 
                     </div>
@@ -64,20 +58,21 @@
             <div class="carousel-item">
                 <img class="third-slide" src="~/Images/banner_2.png" alt="Third slide">
                 <div class="container">
-                    <div class="carousel-caption text-center justify-content-center ">
-                        <img class="img-fluid" src="~/Images/EMI LOGO.png" />
-                        <h1 class="font-weight-bold">Our Events Are Never Ending</h1>
+                    <div class="carousel-caption justify-content-center ">
+                        <img class="p-2 img-fluid" src="~/Images/EMI LOGO.png" />
+                        <h1 class="font-weight-bold">Become A Servant Of God</h1>
                         <p class="font-weight-bold">
-                            There's always something happening at our church,see our upcoming events now...
+                            Be part of any of our ministries and serve your purpose...
                         </p>
                         <br />
-
                         <p>
-                            <a class="btn btn-lg btn-outline-info font-weight-bold" href="#" role="button">
-                                <i class="fa fa-info-circle"> </i>
-                                View Events
+                            <a class="btn btn-lg btn-outline-info" href="@Url.Action("Ministries","Home")" role="button">
+
+                                <i class="fa fa-info-circle"> </i> <b>Find Ministry </b>
+
                             </a>
                         </p>
+
                     </div>
                 </div>
             </div>
@@ -93,179 +88,263 @@
     </div>
 </main>
 
+<div class="d-flex p-3 justify-content-center text-center" style="margin-top:2px;padding-top:3px;">
+    <div class="container-fluid text-center justify-content-center">
+        <h1 class="font-weight-bold text-secondary text-center" style="font-family:'Montserrat'">
+            Empowerment Ministries International
+        </h1>
+
+        <p class="text-secondary text-center" style="font-family:'Montserrat';font-size:16pt;">
+            We are a 3-D purpose driven church with a heart for winning souls for Jesus Christ.<br />A church with a global outlook striving for diversity, inclusivity and collectivity.<br />We aim to raise leaders with a view to make them change agents, impacting the world in the kingdom way.
+        </p>
+        <div class="row p-3 justify-content-center" style="padding-bottom:10px;margin:0px;">
+
+            <div class="col-lg-3 p-2">
+                <img src="~/Images/Pastor K latest.jpg" class="img img-thumbnail" />
+            </div>
+            <div class="col-lg-3 p-2">
+                <img src="~/Images/Pastor T_2.jpg" class="img img-thumbnail" />
+            </div>
+            <div class="col-lg-3 p-2">
+                <img src="~/Images/Pastor Ray Latest.jpg" class="img img-thumbnail" />
+            </div>
+            <div class="col-lg-3 p-2">
+                <img src="~/Images/Harvest2020.jpg" class="img img-thumbnail" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+
+
 <div class="container">
 
-    <hr class="featurette-divider">
+    <hr />
 
-    <div class="row featurette">
+    <div class="row" style="padding-bottom:5px;">
+        <div class="col-md-5">
+            <img class="img-fluid " src="~/Images/senior_pastors.jpg" alt="Generic Placeholder Image">
+        </div>
         <div class="col-md-7">
-            <h2 class="featurette-heading">Meet Our Senior Pastors - <span class="text-muted font-weight-light">They never cease to  accomplish God's will.</span></h2>
-            <p class="lead">
-                Our mission is to establish a church that makes people in our country globaly significant through empowerment,evangelism,discipleship,social engagement,intercessory prayer and apostolic government.
+            <h2 class="text-left text-secondary">Meet Our Senior Pastors - <span class="font-weight-light">They are driven by a deep zeal and passion to accomplish God’s will.</span></h2>
+            <p class="text-left" style="font-family:Montserrat;font-size:13pt;">
+                Our mission is to establish a church that makes people globally significant through empowerment, evangelism, discipleship, social engagement, intercessory prayer and apostolic government.
             </p>
             <br />
-            <p class="text-center justify-content-center">
-                <a class="btn btn-md btn-outline-dark font-weight-bold" href="#" role="button">
+            <p class="pull-left text-left">
+                <a class="btn btn-md btn-outline-dark font-weight-bold" href="@Url.Action("About","Home")" role="button">
                     <i class="fa fa-info-circle"> </i>
                     More Info
                 </a>
             </p>
         </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="~/Images/senior_pastors.jpg" alt="Generic placeholder image">
-        </div>
+
     </div>
 
     <br />
 
-    <hr class="featurette-divider">
+    <hr />
     <br />
-    <div class="row featurette">
+    <div class="row">
         <div class="col-md-7">
-            <h2 class="featurette-headin" >
-                We Have Audio Sermons Just For You - <span class="text-muted font-weight-light">
+            <h2 class="text-left text-secondary">Become Part Of A Connecting Group - <span class="font-weight-light">Empower yourself by joining a homecell</span></h2>
+            <p class="text-left" style="font-family:'Montserrat'">
+                Our Connecting Groups are intended to create a platform for the teaching of the Bible. They serve as our Bible Study Groups. In the Connecting Groups we get to personalize Christian fellowship. In the groups members stand a good a chance of having their personal questions or clarity seeking issues addressed.
+            </p>
+            <p class="pull-left">
+                <a class="btn btn-md btn-outline-dark font-weight-bold" href="@Url.Action("Homecells","Home")" role="button">
+                    <i class="fa fa-info-circle"> </i>
+                    More Info
+                </a>
+            </p>
+        </div>
+        <div class="col-md-5 ">
+            <img class="img-fluid" src="~/Images/homecell_like.jpg" alt="Generic placeholder image">
+        </div>
+    </div>
+    <br />
+    <hr />
+    <div class="row" style="padding-bottom:5px;">
+        <div class="col-md-5">
+            <img class="img-fluid" src="~/Images/discipleship_now.jpg" style="height:350px;"  alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+            <h2 class="text-left text-secondary">
+                We Have Audio Sermons Just For You - <span class="font-weight-light">
                     Empower yourself through listening
                 </span>
             </h2>
-            <p class="lead" style="padding-top:20px;padding-bottom:20px;">
+            <p class="text-left" style="font-family:'Montserrat'">
                 Listen to the teachings of our father and see how your life will be impacted...for we believe that the word of God not only instructs but changes and heals a person in all ways.
             </p>
-            <p class="text-center justify-content-center">
-                <a class="btn btn-md btn-outline-dark font-weight-bold" href="#" role="button">
+            <p class="pull-left text-left">
+                <a class="btn btn-md btn-outline-dark font-weight-bold" href="@Url.Action("Sermons","Home")" role="button">
                     <i class="fa fa-play-circle"> </i>
                     Play Sermons
                 </a>
             </p>
         </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="~/Images/sermons_like.jpg" alt="Generic placeholder image">
-        </div>
+
     </div>
-    <hr class="featurette-divider">
+    <hr>
 
     <br />
-    <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Become Part Of A Connecting Group - <span class="text-muted font-weight-light">Empower yourself by joining a homecell</span></h2>
-            <p class="lead">
-                Cell groups are generally intended to teach the Bible and personalize Christian fellowship. They are always used in cell churches, but also occur in parachurch organizations and other interdenominational settings, where they are usually referred to as such as Bible study groups
-            </p>
-            <p class="text-center justify-content-center">
-                <a class="btn btn-md btn-outline-dark font-weight-bold" href="#" role="button">
-                    <i class="fa fa-info-circle"> </i>
-                    More Info
-                </a>
-            </p>
-        </div>
-        <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="~/Images/homecell_like.jpg" alt="Generic placeholder image">
-        </div>
-    </div>
-    <br />
-    <hr class="featurette-divider">
+
 </div>
 
-<div class="container-fluid text-center justify-content-center  font-weight-bold" style="background-color:cornflower;">
+<div class="jumbotron JumboImage_Two text-white text-center">
+    <div class="container text-center justify-content-center  font-weight-bold text-white">
 
-    <div class="container font-weight-bold ">
-        <h1 style="font-family:sans-serif;">
-            Empowerment Ministries International
-        </h1>
-        <h3 class="text-muted font-weight-lighter" style="font-family:sans-serif;">
-            A Church In Many Locations
-        </h3>
-        <h4 class="text-secondary" style="font-family:CenturyGothic;">
-            EMI has seven live churches each serving in a different area and community.<br /> We strive to be as diverse as we possibly can in order to win more souls.
-        </h4>
-        <div class="row text-white font-weight-bold p-3">
+        <div class="container font-weight-bold">
+            <h1 style="font-family:'Montserrat';color:white;">
+                Empowerment Ministries International
+            </h1>
+            <h3 class="font-weight-lighter" style="font-family:'Montserrat';color:white;">
+                A Church In Many Locations
+            </h3>
+            <h4 class="" style="font-family:'Montserrat';color:white;">
+                EMI has several branches each serving in a different area and community.<br /> We strive to be diverse as possibly as we can in order to win more souls.
+            </h4>
+        </div>
+    </div>
 
-            <div class="col-md-6 p-1">
-                <div class="card" style="background-color:#061C3B;">
-                    <div class="card-body">
-                        <h1> Theunissen</h1>
-                        <p class="card-text">4 Pienaar Laan - Contact: 082 699 2052</p>
-                        <btn class="btn btn-md btn-outline-info font-weight-bold">
-                            <i class="fa fa-map-marker"></i> Directions
-                        </btn>
-                    </div>
-                </div>
+    <div class="row text-white font-weight-bold p-3">
 
-            </div>
-            <div class="col-md-6 p-1">
-                <div class="card" style="background-color:#061C3B;">
-                    <div class="card-body">
-                        <h1> Barkly East </h1>
-                        <p class="card-text">3202 Boyce Nondala - Contact: 073 714 6433</p>
-                        <btn class="btn btn-md btn-outline-info font-weight-bold">
-                            <i class="fa fa-map-marker"></i> Directions
-                        </btn>
-                    </div>
+        <div class="col-md-6 p-1">
+            <div class="card" style="background-color:#061C3B;">
+                <div class="card-body">
+                    <h1> Theunissen</h1>
+                    <p class="card-text"> Contact: 082 699 2052</p>
+                    <button type="submit" role="button" class="btn btn-md btn-outline-info font-weight-bold" onclick="window.location.href='http://maps.google.com?q=4%20Pienaar%20Avenue%20Theunissen'">
+                        <i class="fa fa-map-marker"></i> Directions
+                    </button>
                 </div>
             </div>
-            <div class="col-md-6 p-1">
-                <div class="card" style="background-color:#061C3B;">
-                    <div class="card-body">
-                        <h1> Sterkspruit </h1>
-                        <p class="card-text">Nomvete Street - Contact: 074 794 0357</p>
-                        <btn class="btn btn-md btn-outline-info font-weight-bold">
-                            <i class="fa fa-map-marker"></i> Directions
-                        </btn>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 p-1">
-                <div class="card" style="background-color:#061C3B;">
-                    <div class="card-body">
-                        <h1>Lady Grey </h1>
-                        <p class="card-text">S909 Khwezi Naledi - Contact: 082 699 2052</p>
-                        <btn class="btn btn-md btn-outline-info font-weight-bold">
-                            <i class="fa fa-map-marker"></i> Directions
-                        </btn>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 p-1">
-                <div class="card" style="background-color:#061C3B;">
-                    <div class="card-body">
-                        <h1> Zastron </h1>
-                        <p class="card-text">2636 New Rest - Contact: 071 035 7183</p>
-                        <btn class="btn btn-md btn-outline-info font-weight-bold">
-                            <i class="fa fa-map-marker"></i> Directions
-                        </btn>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 p-1">
-                <div class="card" style="background-color:#061C3B;">
-                    <div class="card-body">
-                        <h1> Bloemfontein </h1>
-                        <p class="card-text">10 Rhodes Avenue - Contact: 051 430 2110</p>
-                        <btn class="btn btn-md btn-outline-info font-weight-bold">
-                            <i class="fa fa-map-marker"></i> Directions
-                        </btn>
-                    </div>
+
+        </div>
+        <div class="col-md-6 p-1">
+            <div class="card" style="background-color:#061C3B;">
+                <div class="card-body">
+                    <h1> UFS </h1>
+                    <p class="card-text"> Contact: 051 430 2110</p>
+                    <button type="submit" role="button" class="btn btn-md btn-outline-info font-weight-bold" onclick="window.location.href='http://maps.google.com?q=205%20Nelson%20Mandela%20Drive'">
+                        <i class="fa fa-map-marker"></i> Directions
+                    </button>
                 </div>
             </div>
         </div>
+        <div class="col-md-6 p-1">
+            <div class="card" style="background-color:#061C3B;">
+                <div class="card-body">
+                    <h1> Sterkspruit </h1>
+                    <p class="card-text"> Contact: 074 794 0357</p>
+                    <button type="submit" role="button" class="btn btn-md btn-outline-info font-weight-bold" onclick="window.location.href='http://maps.google.com?q=Kromspruit'">
+                        <i class="fa fa-map-marker"></i> Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1">
+            <div class="card" style="background-color:#061C3B;">
+                <div class="card-body">
+                    <h1>Lady Grey </h1>
+                    <p class="card-text"> Contact: 082 699 2052</p>
+                    <button type="submit" role="button" class="btn btn-md btn-outline-info font-weight-bold" onclick="window.location.href='http://maps.google.com?q=Khwezi%20Naledi%20Lady%20Grey'">
+                        <i class="fa fa-map-marker"></i> Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1">
+            <div class="card" style="background-color:#061C3B;">
+                <div class="card-body">
+                    <h1> Zastron </h1>
+                    <p class="card-text">Contact: 071 035 7183</p>
+                    <button type="submit" role="button" class="btn btn-md btn-outline-info font-weight-bold" onclick="window.location.href='http://maps.google.com?q=Zastron%20Municipality'">
+                        <i class="fa fa-map-marker"></i> Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1">
+            <div class="card" style="background-color:#061C3B;">
+                <div class="card-body">
+                    <h1> Bloemfontein </h1>
+                    <p class="card-text">Contact: 051 430 2110</p>
+                    <button type="submit" role="button" class="btn btn-md btn-outline-info font-weight-bold" onclick="window.location.href='https://maps.google.com?q=10%20Rhodes%20Avenue%20Orajensig%20Bloemfontein%209300'">
+                        <i class="fa fa-map-marker"></i> Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1 justify-content-center text-center">
+
+            <div class="card justify-content-center" style="background-color:#061C3B;">
+                <div class="card-body">
+                    <h1> CUT </h1>
+                    <p class="card-text"> Contact: 051 430 2110</p>
+                    <button type="submit" role="button" class="btn btn-md btn-outline-info font-weight-bold" onclick="window.location.href='https://maps.google.com?q=20%20President%20Brand%20Bloemfontein%20Central'">
+                        <i class="fa fa-map-marker"></i> Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1 justify-content-center text-center">
+
+            <div class="card justify-content-center" style="background-color:#061C3B;">
+                <div class="card-body">
+                    <h1> Bergman </h1>
+                    <p class="card-text"> Contact: 051 430 2110</p>
+                    <button type="submit" role="button" class="btn btn-md btn-outline-info font-weight-bold" onclick="window.location.href='https://maps.google.com?q=20%20President%20Brand%20Bloemfontein%20Central'">
+                        <i class="fa fa-map-marker"></i> Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1 justify-content-center text-center">
+
+            <div class="card justify-content-center" style="background-color:#061C3B;">
+                <div class="card-body">
+                    <h1> Welkom </h1>
+                    <p class="card-text"> Contact: 081 793 4755</p>
+                    <button type="submit" role="button" class="btn btn-md btn-outline-info font-weight-bold" onclick="window.location.href='https://maps.google.com?q=20%20President%20Brand%20Bloemfontein%20Central'">
+                        <i class="fa fa-map-marker"></i> Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-1 justify-content-center text-center">
+
+            <div class="card justify-content-center" style="background-color:#061C3B;">
+                <div class="card-body">
+                    <h1> Lesotho </h1>
+                    <p class="card-text"> Contact: 081 373 2506</p>
+                    <button type="submit" role="button" class="btn btn-md btn-outline-info font-weight-bold" onclick="window.location.href='https://maps.google.com?q=20%20President%20Brand%20Bloemfontein%20Central'">
+                        <i class="fa fa-map-marker"></i> Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
-<div class="jumbotron text-center bg-transparent">
 
-    <h1 class="text-center p-3 font-weight-lighter text-muted" style="font-family:sans-serif;">
 
-        Find Out Who We Are
 
-    </h1>
+
+<div class="jumbotron justify-content-center text-center bg-transparent">
+
 
     <div class="container">
-        <p class="font-weight-light" style="font-size:14pt;">
-            Empowerment Ministries International is a church started by Pastor Motsamai kareli in 2006 with his wife Pastor Thulisiwe,at that time the church was still small and only had a few congregants.Today the church has several brances accross the country and two satelite campus ministries around Bloemfontein.
+        <p class="font-weight-light text-secondary" style="font-size:14pt;">
+            Empowerment Ministries International is a church founded by Pastor Motsamai Kareli late 2005,at that time the church was still small and only had a few congregants.Today the church has several branches across the country and two satelite campus ministries around Bloemfontein.
 
             <br />
             <br />
 
-            EMI is currently based in Bloemfontein in the Free State province under the leadership of Pastor MBJ Kareli.
+            EMI is currently based in Bloemfontein in the Free State province under the leadership of Pastor MB Kareli.
 
             <br />
             <br />
@@ -275,19 +354,19 @@
             <br />
             <br />
 
-            Our aim is to bring more souls to God for restoration and discipleship.<br />We continuosly strive to empower our people through the word and we shall continue doing so tirelessly.
+            EMI aims to bring more souls to God for restoration and discipleship. We continuosly strive to empower God’s people through the teaching and preaching of the word of God.
         </p>
 
-        <div class="row">
+        <div class="row text-center justify-content-center">
 
             <div class="col-md-4">
                 <img src="~/Images/cross_mission_mi.jpg" class="rounded-circle" width="250" height="250" />
-                <p class="font-weight-bold p-1" style="color:#061C3B;font-family:sans-serif;">
+                <p class="font-weight-light p-1 text-secondary" style="color:#061C3B;font-family:sans-serif;">
                     OUR MISSION
                 </p>
 
-                <p class="font-weight-light" style="font-size:14pt;">
-                    Empowering God's people and advancing the Kingdom of God.
+                <p class="font-weight-light text-secondary" style="font-size:14pt;">
+                    Transforming people,building nations and changing the world through the word.
                 </p>
 
             </div>
@@ -295,22 +374,23 @@
             <div class="col-md-4">
                 <img src="~/Images/cross_believe.jpg" class="rounded-circle" width="250" height="250" />
 
-                <p class="font-weight-bold p-1" style="color:#061C3B;font-family:sans-serif;">
-                    OUR BELIEVE
+                <p class="font-weight-light p-1 text-secondary text-uppercase" style="color:#061C3B;font-family:sans-serif;">
+                    STATEMENT OF FAITH
                 </p>
 
-                <p class="font-weight-light" style="font-size:14pt;">
-                    We believe that Jesus Christ died for us and washed our sins away,through him we have been forgiven and we shall forever praise our father who art in heaven.
+                <p class="font-weight-light text-secondary" style="font-size:14pt;">
+                    EMI believes that all Scripture , as contained in both the Old and New Testaments of the Bible, is the inerrant and inspired Word of God that reveals God’s plan for the salvation of man, and God’s divine will and final authority for all Christian faith and life
                 </p>
             </div>
 
             <div class="col-md-4">
                 <img src="~/Images/cross_vision.jpg" class="rounded-circle" width="250" height="250" />
-                <p class="font-weight-bold p-1" style="color:#061C3B;font-family:sans-serif;">
+                <p class="font-weight-light p-1 text-secondary" style="color:#061C3B;font-family:sans-serif;">
                     OUR VISION
                 </p>
-                <p class="font-weight-light" style="font-size:14pt;">
-                    Transforming people,building nations and changing the world through the word.
+                <p class="font-weight-light text-secondary" style="font-size:14pt;">
+                    Empowering God's people and advancing the Kingdom of God.
+
                 </p>
             </div>
 
@@ -318,10 +398,10 @@
         </div>
 
         <div class="container p-3">
-            <btn class="btn btn-md btn-outline-dark font-weight-bold">
+            <button type="submit" class="btn btn-md btn-outline-dark font-weight-bold" onclick="window.location.href='@Url.Action("About", "Home")';">
                 <i class="fa fa-info-circle"> </i> Learn More
-            </btn>
-           
+            </button>
+
 
         </div>
     </div>
@@ -331,17 +411,17 @@
 <div class="container-fluid text-center justify-content-center" style="background-color:#061C3B;">
 
     <h1 class="font-weight-bold text-white p-3" style="font-family:sans-serif;">
-       Find Out More
+        Find Out More
     </h1>
 
     <div class="row text-white justify-content-center text-center font-weight-bolder">
 
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <h5>
                 <i class="fa fa-phone"></i> 051 430 2110
             </h5>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
 
             <h5>
                 <i class="fa fa-map-marker"> </i>
@@ -351,22 +431,23 @@
             </h5>
 
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
 
             <h5>
-                <i class="fa fa-envelope"> </i> info@emi.org
+                <i class="fa fa-envelope"> </i> info@emichurch.org.za
             </h5>
         </div>
     </div>
 
     <div class="container p-3">
-        <btn class="btn btn-md btn-outline-info font-weight-bold">
+        <button type="submit" onclick="window.location.href='@Url.Action("Contact","Home")'" class="btn btn-md btn-outline-info font-weight-bold">
             Contact Page
-        </btn>
-       
+        </button>
+
     </div>
 
 </div>
+
 <div class="embed-responsive embed-responsive-16by9 p-0" style="padding-top:0px;">
     <iframe frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=10%20Rhodes%20Avenue%20Oranjesig%20bloemfontein&key=AIzaSyDfmSUlrn06l0h_s9ygbnXezTW6W5GqROg"
             class="embed-responsive embed-responsive-16by9"></iframe>

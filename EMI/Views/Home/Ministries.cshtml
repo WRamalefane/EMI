@@ -1,20 +1,20 @@
 ﻿@{
-               
-                ViewBag.Title = "Ministries";
+
+    ViewBag.Title = "Ministries";
 }
 
 <div class="jumbotron JumboImage text-center text-white ">
     <div class="container" style="padding-top:50px;padding-bottom:50px;">
         <h1 class="font-weight-bold" style="font-family:'Montserrat';font-size:50pt;">
-           Ministries
+            Ministries
         </h1>
 
         <h6 class="text-white font-weight-light" style="font-family:'Montserrat';font-size:16pt;">
 
-         EMI has several ministries serving a specific purpose in the house of the Lord.All our church congragants are welcome to join any of ministry of their choice. 
+            EMI has several ministries serving a specific purpose in the house of the Lord.All our church congragants are welcome to join any of ministry of their choice.
         </h6>
     </div>
-</div> <!-- close jumbotron -->
+</div> 
 
 <h1 class="font-weight-bold text-center text-secondary" style="font-family:'Montserrat';font-size:30pt;">
     Our Ministries
@@ -25,112 +25,196 @@
 
 <div class="jumbotron bg-transparent">
     <div class="container">
-        <div class="card-columns">
+        <div class="row text-white font-weight-bold p-3">
+            <div class="col-md-6 p-1">
+                <div class="card" style="background-color:#0f4064">
+                    <div class="card-header text-center">
+                        <h1 class="text-white font-weight-bold">
+                          Evangelism
+                        </h1>
 
-            <div class="card" style="background-color:#0f4064">
-                <div class="card-header text-center">
-                    <h1 class="text-white font-weight-bold">
-                        Outreach & Evangelism
-                    </h1>
-
-                    <button type="submit" id="btnLearnMore" class="btn btn-lg btn-outline-info font-weight-bold">
-                        <i class="fa fa-info-circle"></i> Join Now
-                    </button>
+                        <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Evangelism" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                            <i class="fa fa-info-circle"></i> Join Now
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="background-color:#0f4064">
-                <div class="card-header text-center">
-                    <h1 class="text-white font-weight-bold">
-                        Pastors & Ministers
-                    </h1>
+            <div class="col-md-6 p-1">
+                <div class="card" style="background-color:#0f4064">
+                    <div class="card-header text-center">
+                        <h1 class="text-white font-weight-bold">
+                           Hospitality
+                        </h1>
 
-                    <button type="submit" id="btnLearnMore" class="btn btn-lg btn-outline-info font-weight-bold">
-                        <i class="fa fa-info-circle"></i> Join Now
-                    </button>
+                        <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Hospitality" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                            <i class="fa fa-info-circle"></i> Join Now
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="background-color:#0f4064">
-                <div class="card-header text-center">
-                    <h1 class="text-white font-weight-bold">
-                        Praise & Worship
-                    </h1>
+            <div class="col-md-6 p-1">
+                <div class="card" style="background-color:#0f4064">
+                    <div class="card-header text-center">
+                        <h1 class="text-white font-weight-bold">
+                            Praise & Worship
+                        </h1>
 
-                    <button type="submit" id="btnLearnMore" class="btn btn-lg btn-outline-info font-weight-bold">
-                        <i class="fa fa-info-circle"></i> Join Now
-                    </button>
+                        <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Praise & Worship" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                            <i class="fa fa-info-circle"></i> Join Now
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="background-color:#0f4064">
-                <div class="card-header text-center">
-                    <h1 class="text-white font-weight-bold">
-                        Sound, Graphics & Media
-                    </h1>
+            <div class="col-md-6 p-1">
+                <div class="card" style="background-color:#0f4064">
+                    <div class="card-header text-center">
+                        <h1 class="text-white font-weight-bold">
+                            Sound, Graphics & Media
+                        </h1>
 
-                    <button type="submit" id="btnLearnMore" class="btn btn-lg btn-outline-info font-weight-bold">
-                        <i class="fa fa-info-circle"></i> Join Now
-                    </button>
+                        <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Sound, Graphics & Media" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                            <i class="fa fa-info-circle"></i> Join Now
+                        </button>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-6 p-1">
+                <div class="card" style="background-color:#0f4064">
+                    <div class="card-header text-center">
+                        <h1 class="text-white font-weight-bold">
+                            Youth Ministry Team
+                        </h1>
 
-            <div class="card" style="background-color:#0f4064">
-                <div class="card-header text-center">
-                    <h1 class="text-white font-weight-bold">
-                        Youth Ministry Team
-                    </h1>
-
-                    <button type="submit" id="btnLearnMore" class="btn btn-lg btn-outline-info font-weight-bold">
-                        <i class="fa fa-info-circle"></i> Join Now
-                    </button>
+                        <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Youth Ministry Team" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                            <i class="fa fa-info-circle"></i> Join Now
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="background-color:#0f4064">
-                <div class="card-header text-center">
-                    <h1 class="text-white font-weight-bold">
-                       Kingdom Kids Ministry
-                    </h1>
+            <div class="col-md-6 p-1">
+                <div class="card" style="background-color:#0f4064">
+                    <div class="card-header text-center">
+                        <h1 class="text-white font-weight-bold">
+                            Kingdom Kids Ministry
+                        </h1>
 
-                    
-
-                    <button type="submit" id="btnLearnMore" class="btn btn-lg btn-outline-info font-weight-bold">
-                        <i class="fa fa-info-circle"></i> Join Now
-                    </button>
+                        <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Kingdom Kids Ministry" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                            <i class="fa fa-info-circle"></i> Join Now
+                        </button>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-6 p-1">
+                <div class="card" style="background-color:#0f4064">
+                    <div class="card-header text-center">
+                        <h1 class="text-white font-weight-bold">
+                            Women's Ministry
+                        </h1>
 
-            <div class="card" style="background-color:#0f4064">
-                <div class="card-header text-center">
-                    <h1 class="text-white font-weight-bold">
-                        Women's Ministry
-                    </h1>
-
-                    <button type="submit" id="btnLearnMore" class="btn btn-lg btn-outline-info font-weight-bold">
-                        <i class="fa fa-info-circle"></i> Join Now
-                    </button>
+                        <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Women's Ministry" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                            <i class="fa fa-info-circle"></i> Join Now
+                        </button>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-6 p-1">
+                <div class="card" style="background-color:#0f4064">
+                    <div class="card-header text-center">
+                        <h1 class="text-white font-weight-bold">
+                            Band & Drums Crew
+                        </h1>
 
-            <div class="card" style="background-color:#0f4064">
-                <div class="card-header text-center">
-                    <h1 class="text-white font-weight-bold">
-                        Band  & Drums Crew
-                    </h1>
-
-                    <button type="submit" id="btnLearnMore" class="btn btn-lg btn-outline-info font-weight-bold">
-                        <i class="fa fa-info-circle"></i> Join Now
-                    </button>
+                        <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Band & Drums Crew" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                            <i class="fa fa-info-circle"></i> Join Now
+                        </button>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-6 p-1">
+                <div class="card" style="background-color:#0f4064">
+                    <div class="card-header text-center">
+                        <h1 class="text-white font-weight-bold">
+                             Ushers
+                        </h1>
 
-            <div class="card" style="background-color:#0f4064">
-                <div class="card-header text-center">
-                    <h1 class="text-white font-weight-bold">
-                        Kingdom Ushers Ministries
-                    </h1>
+                        <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Ushers" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                            <i class="fa fa-info-circle"></i> Join Now
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-6 p-1">
+                    <div class="card" style="background-color:#0f4064">
+                        <div class="card-header text-center">
+                            <h1 class="text-white font-weight-bold">
+                                Men's  Ministry
+                            </h1>
 
-                    <button type="submit" id="btnLearnMore" class="btn btn-lg btn-outline-info font-weight-bold">
-                        <i class="fa fa-info-circle"></i> Join Now
-                    </button> 
+                            <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Men's Ministry" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                                <i class="fa fa-info-circle"></i> Join Now
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 p-1">
+
+
+                    <div class="card" style="background-color:#0f4064">
+                        <div class="card-header text-center">
+                            <h1 class="text-white font-weight-bold">
+                                Bereavement Ministry
+                            </h1>
+
+                            <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Bereavement Ministry" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                                <i class="fa fa-info-circle"></i> Join Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-1">
+                    <div class="card" style="background-color:#0f4064">
+                        <div class="card-header text-center">
+                            <h1 class="text-white font-weight-bold">
+                                Global Missions Outreach
+                            </h1>
+
+                            <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Global Missions Outreach" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                                <i class="fa fa-info-circle"></i> Join Now
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 p-1">
+
+                    <div class="card" style="background-color:#0f4064">
+                        <div class="card-header text-center">
+                            <h1 class="text-white font-weight-bold">
+                                Bookstore Ministry
+                            </h1>
+
+                            <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Bookstore Ministry" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                                <i class="fa fa-info-circle"></i> Join Now
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 p-1">
+                    <div class="card" style="background-color:#0f4064">
+                        <div class="card-header text-center">
+                            <h1 class="text-white font-weight-bold">
+                                Marketing Ministry
+                            </h1>
+
+                            <button type="submit" role="button" onclick="window.location.href='@Url.Action("Ministry","Home",new{ministry="Marketing Ministry" })'" id="myBtn" class="btn btn-lg btn-outline-info font-weight-bold">
+                                <i class="fa fa-info-circle"></i> Join Now
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-</div></div>
+            </div>
+
+    </div>

@@ -47,6 +47,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Google.Apis, Version=1.40.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.40.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.40.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.40.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.40.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.40.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.40.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.40.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.40.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.40.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.YouTube.v3, Version=1.40.0.1593, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.YouTube.v3.1.40.0.1593\lib\net45\Google.Apis.YouTube.v3.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -132,6 +150,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ContactUseModel.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\Media.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -147,9 +168,13 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\About us.jpg" />
     <Content Include="Images\afluent.jpg" />
+    <Content Include="Images\afluernt_2019.jpg" />
+    <Content Include="Images\africa_empwerment.jpg" />
     <Content Include="Images\banner.jpg" />
     <Content Include="Images\banner_2.png" />
+    <Content Include="Images\blessing_2.jpg" />
     <Content Include="Images\carousel_1.jpg" />
     <Content Include="Images\carousel_2.jpg" />
     <Content Include="Images\carousel_4.jpg" />
@@ -157,6 +182,7 @@
     <Content Include="Images\chair and studio.jpg" />
     <Content Include="Images\chair and studio.png" />
     <Content Include="Images\church.png" />
+    <Content Include="Images\church_background_now.jpg" />
     <Content Include="Images\church_top.jpg" />
     <Content Include="Images\church_top_two.jpg" />
     <Content Include="Images\congregation.jpg" />
@@ -167,31 +193,56 @@
     <Content Include="Images\cross_services.jpg" />
     <Content Include="Images\cross_souls.jpg" />
     <Content Include="Images\cross_vision.jpg" />
+    <Content Include="Images\discipleship_now.jpg" />
+    <Content Include="Images\elephant-africa-safari-1600x900.jpg" />
     <Content Include="Images\EMI LOGO.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\facebook_small.png" />
+    <Content Include="Images\gathering.jpg" />
     <Content Include="Images\greater works.jpg" />
     <Content Include="Images\greator works.jpg" />
+    <Content Include="Images\Harvest2020.jpg" />
+    <Content Include="Images\homcell_like_3.jpg" />
+    <Content Include="Images\homecell.jpg" />
     <Content Include="Images\homecell_like.jpg" />
+    <Content Include="Images\homecell_like_2.jpg" />
     <Content Include="Images\huge_congregation_top.jpg" />
+    <Content Include="Images\2020Events.jpg" />
+    <Content Include="Images\Kingdom Kids.jpg" />
     <Content Include="Images\leadership summit.jpg" />
     <Content Include="Images\leadership workshop.jpg" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\mme_mme.jpg" />
+    <Content Include="Images\original.jpg" />
     <Content Include="Images\pastor &amp; wife.jpg" />
     <Content Include="Images\pastor blue suit.jpg" />
+    <Content Include="Images\Pastor K latest.jpg" />
     <Content Include="Images\Pastor Mdaka.jpg" />
     <Content Include="Images\Pastor Mfecane.jpg" />
     <Content Include="Images\Pastor Nkwesh.jpg" />
     <Content Include="Images\pastor orange suit.jpg" />
+    <Content Include="Images\pastor orange suit.png" />
+    <Content Include="Images\Pastor Ray Latest.jpg" />
+    <Content Include="Images\pastor thuli latest.jpg" />
+    <Content Include="Images\Pastor T_2.jpg" />
+    <Content Include="Images\PastorKareli_now.jpg" />
+    <Content Include="Images\pastorking_now.jpg" />
+    <Content Include="Images\pastorRey_now.jpg" />
+    <Content Include="Images\pastorss.jpg" />
+    <Content Include="Images\pastors_transpa.png" />
     <Content Include="Images\pastor_rey.jpg" />
     <Content Include="Images\pastor_rey.png" />
+    <Content Include="Images\pastor_rey_now.jpg" />
     <Content Include="Images\picture_2.jpg" />
     <Content Include="Images\picture_3.jpg" />
     <Content Include="Images\picture_4.jpg" />
     <Content Include="Images\picture_5.jpg" />
     <Content Include="Images\prays.jpg" />
     <Content Include="Images\Ps King %281%29.jpg" />
+    <Content Include="Images\PSKareli.jpg" />
+    <Content Include="Images\PSThuli.jpg" />
+    <Content Include="Images\PSTogether.jpg" />
     <Content Include="Images\senior_pastors.jpg" />
     <Content Include="Images\sermons_like.jpg" />
     <Content Include="Images\shares.jpg" />
@@ -202,12 +253,15 @@
     <Content Include="Images\singers_late_session.jpg" />
     <Content Include="Images\singers_late_session.png" />
     <Content Include="Images\singers_late_session_two.jpg" />
+    <Content Include="Images\singers_now.jpg" />
+    <Content Include="Images\singers_now_again.jpg" />
     <Content Include="Images\singers_three.jpg" />
     <Content Include="Images\singers_three.png" />
     <Content Include="Images\singers_two.jpg" />
     <Content Include="Images\solid.png" />
     <Content Include="Images\twitterr.png" />
     <Content Include="Images\twitter_small.png" />
+    <Content Include="Images\violence emiu.jpg" />
     <Content Include="Images\worship.jpg" />
     <Content Include="Images\worshippers_with_pastor.jpg" />
     <Content Include="Images\worshippers_with_pastor.png" />
@@ -216,6 +270,8 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Images\worshipteam.jpg" />
+    <Content Include="Images\worsshippers.jpg" />
     <Content Include="Images\YouthWorship.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -242,6 +298,7 @@
     <Content Include="Images\church.psd" />
     <Content Include="Images\logo.psd" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -291,10 +348,12 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Sermons.cshtml" />
     <Content Include="Views\Home\Giving.cshtml" />
+    <Content Include="Views\Home\G12.cshtml" />
+    <Content Include="Views\Home\Ministry.cshtml" />
+    <Content Include="Views\Home\EventInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

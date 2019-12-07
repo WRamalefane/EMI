@@ -1,6 +1,10 @@
-﻿@{
+﻿@model EMI.Models.ContactUseModel
+@{
     ViewBag.Title = "Contact";
 }
+
+
+
 <div class="jumbotron JumboImage text-center text-white ">
     <div class="container" style="padding-top:50px;padding-bottom:50px;">
         <h1 class="font-weight-bold" style="font-family:'Montserrat';font-size:50pt;">
@@ -8,23 +12,23 @@
         </h1>
 
         <h6 class="text-white font-weight-light" style="font-family:'Montserrat';font-size:16pt;">
-            Empowerment Ministries International admin teams is always keen and ready to answer any query.<br /> Please make use of any below mentioned contact method to send your query.
+            Empowerment Ministries International admin team is always keen and ready to answer any query.<br /> Please make use of any below mentioned contact method to send your query.
         </h6>
     </div>
 
-    <!-- close jumbotron -->
+   
 
     <br />
     <div class="row text-center justify-content-center">
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <i class="fa fa-phone"></i> <b>051 430 2110</b>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <i class="fa fa-envelope">
-            </i> <b>info@emi.org</b>
+            </i> <b>info@emichurch.org.za</b>
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <i class="fa fa-map-marker"></i> <b>10 Rhodes Avenue</b>
         </div>
     </div>
@@ -35,7 +39,7 @@
     <div class="row" align="center">
 
         <div class="col-lg-6">
-            <h2 class="font-weight-bolder text-secondary" style="font-family:'Montserrat'" >
+            <h2 class="font-weight-bolder text-secondary" style="font-family:'Montserrat'">
                 Message Us
             </h2>
             <p style="font-family:'Montserrat'">
@@ -53,60 +57,112 @@
                 Church Office Hours
             </h2>
             <p style="font-family:'Montserrat'">
-                Monday - Thursday : 08:00 AM - 16:30 PM
+                Tuesday - Thursday : 09:00 AM - 16:00 PM
             </p>
             <p style="font-family:'Montserrat'">
-                Friday : 08:00 AM - 13:00 PM
+                Friday : 09:00 AM - 13:00 PM
             </p>
-        </div> <!-- first column -->
+            <h2 class="font-weight-bold text-secondary" style="font-family:'Montserrat'">
+                Social Media
+            </h2>
+            <a href="https://www.facebook.com/Empowerment-Ministries-International-806682642758856/?ref=page_internal" >
+                <i class="fa fa-facebook-square text-center text-secondary m-2" style="font-size:22pt;"></i>
+            </a>
+            <a href="https://twitter.com/emichurch?lang=en">
+                <i class="fa fa-twitter-square text-center text-secondary m-2" style="font-size:22pt;"> </i>
+            </a>
+        </div>
 
         <div class="col-lg-6" style="padding-top:25px;">
-            <form>
+            @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+            {
+                <form class="form-inline">
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "* First Name" })
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.Surname, new { @class = "form-control", placeholder = "* Surname" })
+                    </div>
 
-                <div class="form-group">
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.Cellphone, new { @class = "form-control", placeholder = "* Contact Number" })
+                    </div>
 
-                    <input type="text" class="form-control" id="name" placeholder="Name"
-                           style="width:600px;" />
+                    <div class="form-group">
+
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "* Email Address" })
+                    </div>
+                    <div class="form-group">
+                        @Html.TextAreaFor(m => m.Address, new { @class = "form-control", placeholder = "* Home Address" })
+                    </div>
+                    <div class="form-group">
+                        @Html.TextAreaFor(m => m.Subject, new { @class = "form-control", placeholder = "* Subject" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = "* Message" })
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" role="button" class="btn btn-lg btn-outline-info">Submit</button>
+
+                    </div>
+                </form>
+
+            } @if (!Session["Status"].Equals("empty"))
+            {
+                <div class="alert alert-info">
+                    <a class="close" data-dismiss="alert">&times;</a>
+                    <div class="container text-left text-secondary font-weight-light" style="font-family:'Montserrat'">
+
+                        @Session["Status"]
+
+                    </div>
                 </div>
+            }
+            <div class="p-0">
+                @if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
+                {
+                    <div class="alert alert-info">
+                        <a class="close" data-dismiss="alert">&times;</a>
+                        <div class="container text-left text-secondary font-weight-light" style="font-family:'Montserrat'">
+                          
+
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Name)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Name)<br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Email)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Email)<br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Cellphone)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Cellphone)<br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Subject)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Subject)<br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Message)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Message) <br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Surname)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Surname) <br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Address)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Address)<br />
+                            }
 
 
-                <div class="form-group">
-
-                    <input type="text" class="form-control" id="phone"
-                           style="width:450px;"
-                           placeholder="Contact Number" />
-                </div>
-
-                <div class="form-group">
-                    <input type="email" class="form-control" id="email" style="width:450px;"
-                           placeholder="Email" />
-                </div>
-
-                <div class="form-group">
-
-                    <input type="text" class="form-control" id="subject" style="width:450px;" placeholder="Subject" />
-
-
-                </div>
-
-                <div class="form-group">
-                    <textarea style="width:450px;"
-                              id="message" class="form-control"
-                              placeholder="Message">
-</textarea>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-outline-info btn-lg">
-                        Submit
-                    </button>
-                </div>
-            </form>
-
-
-        </div> <!--second column -->
-
-
-    </div> <!-- main row -->
+                        </div>
+                    </div>
+                }
+            </div>
+        </div> 
+    </div> 
 </div>
 
 <br />

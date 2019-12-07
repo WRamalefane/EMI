@@ -1,0 +1,90 @@
+﻿@model EMI.Models.Email 
+@{
+    ViewBag.Title = "Ministry";
+}
+
+
+<div class="container text-center " style="padding-top:100px;padding-bottom:15px;">
+    <h1 class="font-weight-bold text-secondary " style="font-family:'Montserrat';">
+       @Session["Ministry"]
+    </h1>
+</div>
+<div class="container text-center" style="padding-top:15px;padding-bottom:15px;">
+    <h6 class="font-weight-light" style="font-family:'Montserrat';font-size:16pt;">
+        @Session["Description"]
+    </h6>
+</div>
+
+<div class="container">
+    @using (Html.BeginForm("Ministry", "Home", FormMethod.Post))
+    {
+
+        <form style="padding-top:15px;padding-bottom:15px;">
+            <div class="form-row p-2 justify-content-center text-center">
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control", style = "margin:3px;", placeholder = "* Name" })
+                @Html.TextBoxFor(x => x.Surname, new { @class = "form-control", style = "margin:3px;", placeholder = "* Surname" })
+            </div>
+            <div class="form-row p-2 justify-content-center text-center">
+                @Html.TextBoxFor(x => x.Cellphone, new { @class = "form-control", style = "margin:3px;", placeholder = "* Cellphone" })
+                @Html.TextBoxFor(x => x.EmailAddress, new { @class = "form-control", style = "margin:3px;", placeholder = "* Email Address" })
+            </div>
+            <div class="form-row p-2 justify-content-center text-center">
+                @Html.TextAreaFor(x => x.Message, new { @class = "form-control", style = "margin:3px;", placeholder = "* Message" })
+                @Html.TextAreaFor(x => x.Address, new { @class = "form-control", style = "margin:3px;", placeholder = "* Address" })
+            </div>
+            <dov class="form-row   justify-content-center text-center" style="padding-top:4px;padding-bottom:10px;">
+                <button type="submit" role="button" class="btn btn-lg btn-outline-info"><i class="fa fa-arrow-circle-right"></i>Submit</button>
+            </dov>
+        </form>
+
+
+    }
+     @if (!Session["Status"].Equals("empty"))
+    {
+        <div class="alert alert-info">
+            <a class="close" data-dismiss="alert">&times;</a>
+            <div class="container text-left text-secondary font-weight-light" style="font-family:'Montserrat'">
+
+               @Session["Status"]
+
+            </div>
+            </div>
+            }
+            <div class="p-0">
+                @if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
+                {
+                    <div class="alert alert-info">
+                        <a class="close" data-dismiss="alert">&times;</a>
+                        <div class="container text-left text-secondary font-weight-light" style="font-family:'Montserrat'">
+                            
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Surname)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Surname)<br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Name)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Name)<br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.EmailAddress)))
+                            {
+                                @Html.ValidationMessageFor(x => x.EmailAddress)<br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Cellphone)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Cellphone)<br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Address)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Address)<br />
+                            }
+                            @if (!ViewData.ModelState.IsValidField(nameof(Model.Message)))
+                            {
+                                @Html.ValidationMessageFor(x => x.Message)
+                            }
+
+
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>

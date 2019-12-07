@@ -4,7 +4,8 @@
 .body-content {
     /*padding-left: 0px;
     padding-right: 1px;*/
-    padding-top: 100px;
+    /*padding-top: 100px;*/
+    margin:0 auto;
 }
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -22,11 +23,13 @@ textarea {
 .navbar
 {
     background-color:white;
+    font-family:Montserrat;
+    border-bottom:1px solid gray;
 
 }
 .carousel
-{
-    margin-bottom:4rem;
+1{
+    /*margin-bottom:4rem;*/
 
 }
 .carousel-caption
@@ -43,8 +46,9 @@ textarea {
     position:absolute;
     top:0;
     left:0;
-    min-width:100%;
+    /*min-width:100%;*/
   height:36rem;
+  
 }
 .JumboImage
 {
@@ -59,6 +63,75 @@ textarea {
     background-image: url("/Images/banner_2.png");
     background-size: cover;
     /*height:32rem;*/
+}
+.dropDownMenu > a :hover {
+    border: 0px none transparent;
+    list-style: none;
+    list-style-type: none;
+    background-color: brown;
+}
+.dropdown {
+    list-style: none;
+    background-color: none;
+    display: inline-block;
+    list-style-type:none;
+    border:0px none transparent;
+    
+}
+
+    .dropdown .nav-link {
+        color: #fff;
+        text-decoration: none;
+        list-style-type: none;
+        list-style: none;
+        border: 0px none transparent;
+    }
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+    .dropdown .dropdown-menu a {
+        color: #000;
+        text-decoration: none;
+        list-style-type: none;
+        list-style: none;
+        border: 0px none transparent;
+       
+    }
+
+    
+
+      
+
+        .dropdown .btn:active {
+            background: cyan;
+            color: #000;
+        }
+
+        .dropdown .btn:focus {
+            background: cyan;
+            color: #000;
+        }
+
+.dropdown-menu .dropdown-item {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 5px;
+    list-style-type: none;
+    list-style: none;
+    border: 0px none transparent;
+}
+
+.container .dropdown .dropdown-menu a:hover {
+    color: #fff;
+    background-color: #b91773;
+    border-color: #fff;
+    list-style-type: none;
+    list-style: none;
+    border: 0px none transparent;
 }
 
 
